@@ -1,171 +1,595 @@
 #include<iostream>
+
 using namespace std;
+
 int main (){
+
     int kode,pri,jml,tot,byr,kbl;
+
     char mad;
+
     do 
+
     {
+
     Home:
-    cout<<"               RUMAH MAKAN               "<<endl;
-    cout<<"        Aplikasi kasir rumah makan       "<<endl;
+
     cout<<"============================================"<<endl;
-    cout<<"Menu Makanan          Harga"<<endl;
-    cout<<"1. AYAM GORENG        Rp. 10.000"<<endl;
-    cout<<"2. NASI GORENG        Rp.  8.000"<<endl;
-    cout<<"3. MIE PANGSIT        Rp. 10.000"<<endl;
-    cout<<"4. NASI BALAP PUYUNG  Rp. 12.000"<<endl;
-    cout<<"5. NASI CAMPUR        Rp.  8.000"<<endl<<endl;
-    cout<<"MASUKKAN PILIHAN ANDA :";
+
+    cout<<"               RUMAH MAKAN               "<<endl;
+
+    cout<<"        Aplikasi kasir rumah makan       "<<endl;
+
+    cout<<"============================================"<<endl;
+
+    cout<<"                 Menu     "<<endl;
+
+    cout<<"1. Ayam Teriyaki      Rp. 10.000"<<endl;
+
+    cout<<"2. Nasi Campur        Rp.  8.000"<<endl;
+
+    cout<<"3. Mie Goreng         Rp. 10.000"<<endl;
+
+    cout<<"4. Nasi Goreng        Rp. 12.000"<<endl;
+
+    cout<<"5. Nasi Spesial       Rp.  8.000"<<endl;
+
+    cout<<"***Jika total belanja lebih dari 100k maka mendapat diskon 10% !!!***"<<endl;
+
+    cout<<"Masukan Pilihan :";
+
     cin>>kode;
+
     switch (kode){
+
     case 1:
-        cout<<"AYAM GORENG"<<endl;
+
+        cout<<"Ayam Teriyaki"<<endl;
+
         pri=10000;
+
         cout<<"Masukkan Jumlah yang dipesan : ";
+
         cin>>jml;
+
         
+
             tot=pri*jml;
-        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
-        cout<<"DIBAYAR : Rp. ";
-        cin>>byr;
-        if(byr<tot){
+
+            if(tot>=100000){
+
+                tot*90/100;
+
                 cout<<endl;
+
+                cout<<"Selamat Anda Mendapat diskon 10% !!! "<<endl;
+
+                cout<<"Total harganya yaitu : Rp. "<<tot*90/100<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot*90/100){
+
+                cout<<endl;
+
                 cout<<"Uang anda kurang!"<<endl;
+
                 cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
                 cout<<"Ulangi Pesanan? Y/T :";
+
         cin>>mad;
+
         if(mad=='Y'){
+
             goto Home;
+
         }else{
+
             break;
+
         }
-            }
-            kbl=byr-tot;
+
+            }kbl=byr-tot*90/100;
+
             cout<<"KEMBALI : Rp. "<<kbl<<endl;
-        cout<<"Masih ada? Y/T :";
+
+        cout<<"Ada lagi? Y/T :";
+
         cin>>mad;
+
+            }else{
+
+            cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot){
+
+                cout<<endl;
+
+                cout<<"Uang anda kurang!"<<endl;
+
+                cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
+                cout<<"Ulangi Pesanan? Y/T :";
+
+        cin>>mad;}}
+
+        if(mad=='Y'){
+
+            goto Home;
+
+        }else{kbl=byr-tot;
+
+            cout<<"KEMBALI : Rp. "<<kbl<<endl;
+
+        cout<<"Ada lagi? Y/T :";
+
+        cin>>mad;
+
+            break;
+
+        }
+
             
+
+            
+
         
+
+            
+
+            
+
+        
+
         break;
+
     case 2:
-        cout<<"NASI GORENG"<<endl;
+
+        cout<<"Nasi Campur"<<endl;
+
             pri=8000;
+
         cout<<"Masukkan Jumlah :";
+
         cin>>jml;
+
             tot=pri*jml;
-        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
-        cout<<"DIBAYAR : Rp. ";
-        cin>>byr;
-        if(byr<tot){
+
+            if(tot>=100000){
+
+                tot*90/100;
+
                 cout<<endl;
+
+                cout<<"Selamat Anda Mendapat diskon 10% !!! "<<endl;
+
+                cout<<"Total harganya yaitu : Rp. "<<tot*90/100<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot*90/100){
+
+                cout<<endl;
+
                 cout<<"Uang anda kurang!"<<endl;
+
                 cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
                 cout<<"Ulangi Pesanan? Y/T :";
+
         cin>>mad;
+
         if(mad=='Y'){
+
             goto Home;
+
         }else{
+
             break;
+
         }
-            }
-            kbl=byr-tot;
+
+            }kbl=byr-tot*90/100;
+
             cout<<"KEMBALI : Rp. "<<kbl<<endl;
-        cout<<"Masih ada? Y/T :";
+
+        cout<<"Ada lagi? Y/T :";
+
         cin>>mad;
+
+            }else{
+
+            cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot){
+
+                cout<<endl;
+
+                cout<<"Uang anda kurang!"<<endl;
+
+                cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
+                cout<<"Ulangi Pesanan? Y/T :";
+
+        cin>>mad;}}
+
+        if(mad=='Y'){
+
+            goto Home;
+
+        }else{kbl=byr-tot;
+
+            cout<<"KEMBALI : Rp. "<<kbl<<endl;
+
+        cout<<"Ada lagi? Y/T :";
+
+        cin>>mad;
+
+            break;
+
+        }
+
             
+
+            
+
         
+
+            
+
+            
+
+        
+
         break;
+
     case 3:
-        cout<<"MIE PANGSIT"<<endl;
+
+        cout<<"Mie Goreng"<<endl;
+
             pri=10000;
+
         cout<<"Masukkan Jumlah :";
+
         cin>>jml;
+
             tot=pri*jml;
-        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
-        cout<<"DIBAYAR : Rp. ";
-        cin>>byr;
-        if(byr<tot){
+
+            if(tot>=100000){
+
+                tot*90/100;
+
                 cout<<endl;
+
+                cout<<"Selamat Anda Mendapat diskon 10% !!! "<<endl;
+
+                cout<<"Total harganya yaitu : Rp. "<<tot*90/100<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot*90/100){
+
+                cout<<endl;
+
                 cout<<"Uang anda kurang!"<<endl;
+
                 cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
                 cout<<"Ulangi Pesanan? Y/T :";
+
         cin>>mad;
+
         if(mad=='Y'){
+
             goto Home;
+
         }else{
+
             break;
+
         }
-            }
-            kbl=byr-tot;
+
+            }kbl=byr-tot*90/100;
+
             cout<<"KEMBALI : Rp. "<<kbl<<endl;
-        cout<<"Masih ada? Y/T :";
+
+        cout<<"Ada lagi? Y/T :";
+
         cin>>mad;
+
+            }else{
+
+            cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot){
+
+                cout<<endl;
+
+                cout<<"Uang anda kurang!"<<endl;
+
+                cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
+                cout<<"Ulangi Pesanan? Y/T :";
+
+        cin>>mad;}}
+
+        if(mad=='Y'){
+
+            goto Home;
+
+        }else{kbl=byr-tot;
+
+            cout<<"KEMBALI : Rp. "<<kbl<<endl;
+
+        cout<<"Ada lagi? Y/T :";
+
+        cin>>mad;
+
+            break;
+
+        }
+
             
+
+            
+
         
+
+            
+
+            
+
+        
+
         break;
+
     case 4:
-        cout<<"NASI BALAP PUYUNG"<<endl;
+
+        cout<<"Nasi Goreng"<<endl;
+
             pri=12000;
+
         cout<<"Masukkan Jumlah :";
+
         cin>>jml;
+
             tot=pri*jml;
-        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
-        cout<<"DIBAYAR : Rp. ";
-        cin>>byr;
-        if(byr<tot){
+
+            if(tot>=100000){
+
+                tot*90/100;
+
                 cout<<endl;
+
+                cout<<"Selamat Anda Mendapat diskon 10% !!! "<<endl;
+
+                cout<<"Total harganya yaitu : Rp. "<<tot*90/100<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot*90/100){
+
+                cout<<endl;
+
                 cout<<"Uang anda kurang!"<<endl;
+
                 cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
                 cout<<"Ulangi Pesanan? Y/T :";
+
         cin>>mad;
+
         if(mad=='Y'){
+
             goto Home;
+
         }else{
+
             break;
+
         }
-            }
-            kbl=byr-tot;
+
+            }kbl=byr-tot*90/100;
+
             cout<<"KEMBALI : Rp. "<<kbl<<endl;
-        cout<<"Masih ada? Y/T :";
+
+        cout<<"Ada lagi? Y/T :";
+
         cin>>mad;
-            
-        
-        break;
-    case 5:
-        cout<<"NASI CAMPUR"<<endl;
-            pri=8000;
-        cout<<"Masukkan Jumlah :";
-        cin>>jml;
-        
-            tot=pri*jml;
-        cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
-        cout<<"DIBAYAR : Rp. ";
-        cin>>byr;
-            if(byr<tot){
+
+            }else{
+
+            cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot){
+
                 cout<<endl;
+
                 cout<<"Uang anda kurang!"<<endl;
+
                 cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
                 cout<<"Ulangi Pesanan? Y/T :";
-        cin>>mad;
+
+        cin>>mad;}}
+
         if(mad=='Y'){
+
             goto Home;
-        }else{
-            break;
-        }
-            }
-        kbl=byr-tot;
-        cout<<"KEMBALI : Rp. "<<kbl<<endl;
-        cout<<"Masih ada? Y/T :";
+
+        }else{kbl=byr-tot;
+
+            cout<<"KEMBALI : Rp. "<<kbl<<endl;
+
+        cout<<"Ada lagi? Y/T :";
+
         cin>>mad;
+
+            break;
+
+        }
+
             
+
+            
+
         
+
+            
+
+            
+
+        
+
         break;
+
+    case 5:
+
+        cout<<"Nasi Spesial"<<endl;
+
+            pri=8000;
+
+        cout<<"Masukkan Jumlah :";
+
+        cin>>jml;
+
+        
+
+            tot=pri*jml;
+
+            if(tot>=100000){
+
+                tot*90/100;
+
+                cout<<endl;
+
+                cout<<"Selamat Anda Mendapat diskon 10% !!! "<<endl;
+
+                cout<<"Total harganya yaitu : Rp. "<<tot*90/100<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot*90/100){
+
+                cout<<endl;
+
+                cout<<"Uang anda kurang!"<<endl;
+
+                cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
+                cout<<"Ulangi Pesanan? Y/T :";
+
+        cin>>mad;
+
+        if(mad=='Y'){
+
+            goto Home;
+
+        }else{
+
+            break;
+
+        }
+
+            }kbl=byr-tot*90/100;
+
+            cout<<"KEMBALI : Rp. "<<kbl<<endl;
+
+        cout<<"Ada lagi? Y/T :";
+
+        cin>>mad;
+
+            }else{
+
+            cout<<"Total harganya yaitu : Rp. "<<tot<<endl;
+
+                cout<<"DIBAYAR : Rp. ";
+
+                cin>>byr;
+
+                if(byr<tot){
+
+                cout<<endl;
+
+                cout<<"Uang anda kurang!"<<endl;
+
+                cout<<"Mohon Ulangi Pesanan Anda!"<<endl;
+
+                cout<<"Ulangi Pesanan? Y/T :";
+
+        cin>>mad;}}
+
+        if(mad=='Y'){
+
+            goto Home;
+
+        }else{kbl=byr-tot;
+
+            cout<<"KEMBALI : Rp. "<<kbl<<endl;
+
+        cout<<"Ada lagi? Y/T :";
+
+        cin>>mad;
+
+            break;
+
+        }
+
+            
+
+            
+
+        
+
+            
+
+            
+
+        
+
+        break;
+
     
+
     default:
-    cout<<"Kode yang anda masukkan tidak ada"<<endl;
+
+    cout<<"Kode yang anda masukkan tidak ada!"<<endl;
+
     }
+
     } 
+
     while (mad/='Y');
+
     cout<<"Terima Kasih Atas Kunjungan Anda";
+
     return 0;
+
 }
